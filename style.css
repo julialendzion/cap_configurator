@@ -1,0 +1,7 @@
+.color_btn {
+  cursor: pointer;
+}
+
+#shadow {
+  pointer-events: none;
+}
