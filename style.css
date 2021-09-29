@@ -5,3 +5,8 @@
 #shadow {
   pointer-events: none;
 }
+
+.cls-1:hover {
+  fill: gray;
+  cursor: pointer;
+}

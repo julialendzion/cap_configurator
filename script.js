@@ -11,18 +11,10 @@ async function start() {
 }
 
 function init() {
-  // let crown = document.querySelector("#crown");
-  // let visor = document.querySelector("#visor");
-
   document.querySelectorAll(".cls-1").forEach((item) => {
-    // console.log("ITEM", item.getAttribute("fill"));
     item.addEventListener("click", (event) => {
-      //fill din't work as event.target.fill
-      console.log("clicked");
       setElement(event.target);
-
       event.target.style.fill = "grey";
-      setElement(event.target);
     });
   });
 
@@ -31,19 +23,13 @@ function init() {
   }
 
   document.querySelectorAll("rect").forEach((item) => {
-    // console.log("ITEM", item.getAttribute("fill"));
     item.addEventListener("click", (event) => {
       console.log(elementToPaint);
-      //fill din't work as event.target.fill
+      //fill din't work as event.target.fill --> item.getAttribute("fill")); solved it
       setColor(event.target.getAttribute("fill"));
-      // console.log(event.target.getAttribute("fill"));
     });
   });
 }
-
-// function setElement(element) {
-//   setColor(visor, event.target.getAttribute("fill"));
-// }
 
 function setColor(color) {
   console.log(color);
